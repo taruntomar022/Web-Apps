@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary App</title>
+    
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="angular.js" type="application/javascript"></script>
+    <script src="js/app.js" type="application/javascript">
+    </script>
+    <script src="js/module.js" type="application/javascript">
+    </script>
+<script src="js/controller.js" type="application/javascript"></script>
+
+<style>
+    #main
+    {
+        margin-left: 650px;
+        margin-top: 50px;
+    }
+    #head
+    {
+        margin-left: 680px;
+    }
+    
+    </style>
+</head>
+<body ng-app="myapp" ng-controller="myCtrl">
+   
+   
+   <h1 id="head">DICTIONARY</h1>
+   <div id="main">
+   
+   
+   <input ng-model="key" class="input-lg">
+   <button ng-click="search()" class="btn btn-success">Search</button>
+   
+   
+   <div ng-show="shownow" class="divider">
+   <p>The word is :-- &nbsp;&nbsp;{{word}}</p>
+   <p>The etymologies is :-- &nbsp;&nbsp;{{etm}}</p>
+   <p>The defination is :-- &nbsp;&nbsp;{{def}}</p>
+   <p>The example is :-- &nbsp;&nbsp;{{example}}</p>
+ 
+   <br>
+   <br>
+   <br>
+   
+   <p>Here is the pronunciation
+   <audio src="{{pronun}}" controls></audio>
+</p>    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+body
+{
+    background-color: azure;
+}
+        #parent
+            {
+                position: relative;
+                height: 400px;
+                width: 400px;
+                
+                margin: 0 auto;
+                margin-top: 150px;
+               
+            }
+            #cube
+            {
+                transition: 5s;
+                
+                transform-style: preserve-3d;
+               
+            }
+            #cube div
+            {
+               position: absolute;
+                height: 400px;
+                width: 400px; 
+                top: 0px;
+                left: 0px;
+                color: white;
+                font-size: 30px;
+                background-color: rgba(0,0,0,0.5);
+                background-size: 100% 100%;
+                border: 3px solid red;
+                transition: 2s;
+                
+                
+            }
+            #left
+            {
+              
+                transform: rotateY(90deg);
+                transform-origin: left;
+                background-image: url(img/panda1.gif);
+            }
+            #right
+            {
+                
+                transform: rotateY(-90deg);
+                transform-origin: right;
+                background-image: url(img/panda2.gif);
+            }
+             #top
+            {
+              
+                transform: rotateX(-90deg);
+                transform-origin: top;
+                background-image: url(img/panda3.gif);
+            }
+             #bottom
+            {
+              
+                transform: rotateX(90deg);
+                transform-origin: bottom;
+                background-image: url(img/panda4.gif);
+            }
+            #back
+            {
+               
+                transform: translateZ(-400px);
+                background-image: url(img/panda5.gif);
+            }
+            #front
+            {
+                //background-color: rgba(0,0,0,0.5);
+                background-image: url(img/panda6.gif);
+            }
+           
+            @keyframes anim_1
+            {
+                0%
+                {
+                    transform: rotate3d(0,0,0,0deg);
+                }
+                100%
+                {
+                    transform: rotate3d(1,1,1,360deg);
+                }
+            }
+
+            #top:hover
+                {
+                   
+                    transform: scale(1.8,1.8);
+                }
+ #back:hover
+                {
+                    transform: scale(1.8,1.8);
+                }
+
+ #front:hover
+                {
+                    
+                    transform: scale(1.8,1.8);
+                }
+ #left:hover
+                {
+                    transform: scale(1.8,1.8);
+                }
+ #right:hover
+                {
+                    
+                    transform: scale(1.8,1.8);
+                }
+ #bottom:hover
+                {
+                   
+                    transform: scale(1.8,1.8);
+                }
+            
+
+input[value="play"]:checked ~ #parent #cube 
+{
+    animation: anim_1 5s infinite linear;
+}
+
+input[value="pause"]:checked ~ #parent #cube 
+{
+    animation-play-state: paused;
+}
+
+input[value="open"]:checked ~ #parent #cube #top
+{
+    transform: translateX(-450px);
+    transition: 2s;
+}
+input[value="open"]:checked ~ #parent #cube #bottom
+{
+    transform: translateX(450px);
+    transition: 2s;
+}
+input[value="open"]:checked ~ #parent #cube #left
+{
+    transform: translateY(450px);
+    transition: 2s;
+}
+input[value="open"]:checked ~ #parent #cube #right
+{
+    transform: translateY(-450px);
+    transition: 2s;
+}
+input[value="open"]:checked ~ #parent #cube #back
+{
+    transform: translateZ(450px);
+    transition: 2s;
+}
+input[value="open"]:checked ~ #parent #cube #front
+{
+    transform: translateZ(-450px);
+    transition: 2s;
+}
+
+input[value="xrotate"]:checked ~ #parent #cube 
+{
+    animation: xRot 5s infinite linear;
+    /*transition: 2s;*/
+}
+
+@keyframes xRot
+{
+    0%
+    {
+        transform: rotate3d(0,0,0,0deg);
+    }
+    100%
+    {
+        transform: rotate3d(1,0,0,360deg);
+    }
+}
+
+input[value="yrotate"]:checked ~ #parent #cube 
+{
+    animation: yRot 5s infinite linear;
+    /*transition: 2s;*/
+}
+
+@keyframes yRot
+{
+    0%
+    {
+        transform: rotate3d(0,0,0,0deg);
+    }
+    100%
+    {
+        transform: rotate3d(0,1,0,360deg);
+    }
+}
+
+input[value="zrotate"]:checked ~ #parent #cube 
+{
+    animation: zRot 5s infinite linear;
+    /*transition: 2s;*/
+}
+
+@keyframes zRot
+{
+    0%
+    {
+        transform: rotate3d(0,0,0,0deg);
+    }
+    100%
+    {
+        transform: rotate3d(0,0,1,360deg);
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Entry</title>
+    
+    <script src="js/controller.js" type="text/javascript"></script>
+    <script src="js/model.js" type="text/javascript"></script>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    
+    <fieldset id="submitData">
+        <label >Enter the details here</label>
+           
+           
+            <table border="2px">
+            
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type=text id="name" placeholder="Enter the name"></td>
+            </tr>
+            
+            
+            <tr>
+                <td><label>Employee Id</label></td>
+                <td><input type=text id="id" placeholder="Enter the id"></td>
+            </tr>
+            
+            
+            <tr>
+                <td><label>Salary</label></td>
+                <td><input type=text id="salary" placeholder="Enter the salary"></td>
+            </tr>
+            
+            
+           
+            
+        </table>
+         <button id="submit">Click here to submit</button>
+           <button id="sort">Click here to sort</button>
+           <button id="search">Click here to search an employee</button>
+            
+        
+ 
+        
+        
+    </fieldset>
+    
+    <fieldset>
+        
+        <label >Employee registered</label>
+        
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Id</td>
+                    <td>Salary</td>
+                    <td>Operations</td>
+                    
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+                
+            </tbody>
+        </table>
+    </fieldset>
+</body>
+</html>

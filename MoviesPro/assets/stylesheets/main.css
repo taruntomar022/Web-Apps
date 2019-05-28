@@ -1,0 +1,315 @@
+
+body { font-family: Arial, Helvetica, sans-serif; font-size: 1em; line-height: 1.4; margin: 0px;}
+
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Ubuntu', Arial, Helvetica, sans-serif; font-weight:bold; text-rendering: optimizeLegibility; margin-top:0px; }
+
+
+p { font-weight: normal; margin-top:0px; }
+
+
+
+a { color: #2ba6cb; text-decoration: none; line-height: inherit; }
+a:focus { color: #2ba6cb; outline: none; }
+p a, p a:visited { line-height: inherit; }
+
+
+/*
+* A better looking default horizontal rule
+*/
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+
+img {
+    vertical-align: middle; max-width: 100%; height: auto;
+}
+
+
+
+
+.left { float: left; }
+
+.right { float: right; }
+
+
+
+.text-left { text-align: left; }
+
+.text-right { text-align: right; }
+
+.text-center { text-align: center; }
+
+
+
+img.alignleft { float:left; margin:0 10px 10px 0; display: inline;}
+
+img.alignright { float:right; margin:0 0px 10px 10px; display: inline;}
+
+img.aligncenter { display:block; margin-left:auto; margin-right:auto; margin-bottom:10px;}
+
+
+
+
+
+/* Container ---------------------- */
+#container {  }
+
+.row {
+    display: flex;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 1330px;
+    margin: 0 auto;
+}
+
+/* Header ---------------------- */
+#header { 
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    z-index: 100;
+}
+ #header .row {
+     justify-content: space-around;
+ }
+
+#header .logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#header .logo a {
+    color: #fff;
+}
+#header .logo a span{
+    color: #02a388;
+    font-size: 1.5em;
+ }
+
+ #header .search {
+     padding-top: 25px;
+ }
+ #header .search a {
+     color: #fff;
+ }
+
+/* Banner ---------------------- */
+#banner{
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+ }
+ #banner .overlay {
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     background-color: rgba(0,0,0,0.3);
+     left: 0px;
+     top: 0px;
+ }
+ #banner .slideshow {
+     height: inherit;
+    animation: slideshow 10s infinite linear;
+    background-image: url("https://p.w3layouts.com/demos_new/template_demo/05-12-2017/movies_pro-demo_Free/482523427/web/images/2.jpg");
+    background-size: 100% 100%;
+    /* transform: scale(1.4,1.4); */
+ }
+ @keyframes slideshow {
+     0% {
+        background-image: url("https://p.w3layouts.com/demos_new/template_demo/05-12-2017/movies_pro-demo_Free/482523427/web/images/2.jpg");
+        transform: scale(1.4,1.4);
+     }
+     25% {
+         background-image: url("https://p.w3layouts.com/demos_new/template_demo/05-12-2017/movies_pro-demo_Free/482523427/web/images/1.jpg");
+         transform: scale(1.3,1.3);
+     }
+     50% {
+         background-image: url("https://p.w3layouts.com/demos_new/template_demo/05-12-2017/movies_pro-demo_Free/482523427/web/images/3.jpg");
+         transform: scale(1.2,1.2);
+     }
+     75% {
+         background-image: url("https://p.w3layouts.com/demos_new/template_demo/05-12-2017/movies_pro-demo_Free/482523427/web/images/4.jpg");
+         transform: scale(1.1,1.1);
+     }
+     100% {
+        background-image: url("https://p.w3layouts.com/demos_new/template_demo/05-12-2017/movies_pro-demo_Free/482523427/web/images/2.jpg");
+        transform: scale(1.1,1.1);
+     }
+ }
+
+
+/* Main Navigation ---------------------- */
+#main-navigation{
+    padding-top: 10px;
+ }
+#main-navigation ul {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+#main-navigation ul li {
+    margin: 0px 8px;
+}
+#main-navigation ul li a {
+    display: block;
+    font-size: 14px;
+    padding: 15px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    color: #fff;
+}
+#main-navigation ul li:hover a {
+    background-color: #02A388;
+    color: #fff;
+}
+#main-navigation ul li.dropdown {
+    position: relative;
+}
+#main-navigation ul li.dropdown a{
+    padding-right: 20px;
+}
+#main-navigation ul li.dropdown:after {
+    content: "";
+    border: 5px solid #fff;
+    border-color: #fff transparent transparent;
+    position: absolute;
+    right: 4px;
+    top: 22px;
+}
+
+
+
+.btn {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    padding: 15px 26px;
+    text-transform: uppercase;
+    background-color: #000;
+    transition: 1s;
+}
+.btn.active {
+    background-color: #02A388;
+}
+.btn:hover {
+    background-color: #02A388;
+}
+
+#section_1 {
+    padding: 50px 0px;
+}
+#section_1 ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+#section_1 .links ul li {
+    margin: 0px 10px;
+}
+#section_1 .links ul{
+    margin: 0px 0px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.poster .description{
+    background-color: #000;
+    padding: 25px 15px 30px;
+}
+.poster .description h3 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #02a388;
+    margin-bottom: 30px;
+}
+.poster .description span {
+    color: #02a388;
+    font-size: 16px;
+    display: inline-block;
+    width: 100px;
+    margin-right: 20px;
+    position: relative;
+}
+.poster .description span:after {
+    content: ":";
+    position: absolute;
+    right: 0px;
+    font-weight: bold;
+}
+.poster .description a {
+    color: #9ea2a2;
+    font-size: 14px;
+}
+.poster .description p {
+    color: #9ea2a2;
+    font-size: 14px;
+}
+.poster .genre a:after {
+    content: " | ";
+    /* border: 1px solid #9ea2a2; */
+}
+.poster .genre a:last-child:after {
+    content: "";
+} 
+
+.fa-star, .fa-star-half {
+    font-size: 14px;
+    color: #fff;
+}
+
+.col-2 .row{
+    justify-content: space-around;
+}
+.col-2 .image {
+    position: relative;
+}
+.col-2 .col {
+    width: 23%;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 1px rgba(110, 110, 111, 0.42);
+}
+.col-2 .col .rating {
+    margin-left: 20px;
+}
+
+.col-2 .meta{
+    background-color: #EDEDF1;
+    padding: 10px 10px;
+}
+.col-2 h4 {
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.col-2 a {
+    color: #0c0d0d;
+}
+.col-2 i{
+    color: red;
+}
+
+.col-2 .overlay {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.5);
+}
+.col-2 .image:hover .overlay{
+    transform: scale(1,1);
+}
